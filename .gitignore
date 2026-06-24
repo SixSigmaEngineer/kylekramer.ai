@@ -1,0 +1,15 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Source/original assets (optimized copies live in images/)
+Book Launch.png
+
+# Vercel
+.vercel
