@@ -136,6 +136,7 @@ button, .btn, .nav-toggle, [onclick] { cursor: pointer; }
 
 /* ---------- Stat strip ---------- */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.stats-3 { grid-template-columns: repeat(3, 1fr); max-width: 820px; }
 .stat .num { font-family: var(--serif); font-size: 2.4rem; color: var(--ink); font-weight: 600; line-height: 1; }
 .stat .num .accent { color: var(--accent); }
 .stat .label { font-size: .92rem; color: var(--muted); margin-top: 8px; }
@@ -245,6 +246,18 @@ button, .btn, .nav-toggle, [onclick] { cursor: pointer; }
 .proof-stat .proof-text { color: #cdd6e4; font-size: .95rem; }
 @media (max-width: 860px) { .proof-stat { flex-direction: column; align-items: flex-start; gap: 10px; } }
 
+
+/* ---------- CARES framework block (home) ---------- */
+.cares-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 40px; align-items: stretch; margin-top: 32px; }
+.cares-metric { background: var(--bg-navy); color: #cdd6e4; border-radius: 14px; padding: 36px; display: flex; flex-direction: column; justify-content: center; }
+.cares-num { font-family: var(--serif); font-size: 4rem; font-weight: 600; color: #d9b277; line-height: 1; }
+.cares-cap { color: #cdd6e4; font-size: .95rem; margin: 16px 0 0; }
+.cares-explain { display: flex; flex-direction: column; justify-content: center; }
+.cares-explain p { color: var(--ink-soft); }
+.cares-letters { font-weight: 500; color: var(--ink); font-size: .98rem; }
+.cares-letters strong { color: var(--accent-dk); }
+@media (max-width: 860px) { .cares-grid { grid-template-columns: 1fr; gap: 24px; } .cares-num { font-size: 3.2rem; } }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
@@ -253,6 +266,7 @@ button, .btn, .nav-toggle, [onclick] { cursor: pointer; }
   .hero-photo { order: -1; }
   .hero-photo img { max-width: 240px; }
   .stats { grid-template-columns: repeat(2,1fr); gap: 24px; }
+  .stats-3 { grid-template-columns: 1fr; max-width: none; }
   .facts { grid-template-columns: 1fr; }
   .nav-links {
     position: absolute; top: 68px; left: 0; right: 0; flex-direction: column;
