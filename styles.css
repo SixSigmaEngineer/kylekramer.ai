@@ -237,6 +237,14 @@ button, .btn, .nav-toggle, [onclick] { cursor: pointer; }
 .pullquote cite { font-style: normal; font-weight: 600; color: var(--accent-dk); font-size: .95rem; }
 .pullquote .gloss { color: var(--ink-soft); margin-top: 14px; font-size: 1.08rem; }
 
+
+/* ---------- CARES proof stat (home featured block) ---------- */
+.proof-stat { display: flex; align-items: center; gap: 18px; margin: 24px 0 4px; padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.16); border-radius: 12px; background: rgba(255,255,255,.05); }
+.proof-stat .proof-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 600; color: #d9b277; line-height: 1; flex: none; }
+.proof-stat .proof-text { color: #cdd6e4; font-size: .95rem; }
+@media (max-width: 860px) { .proof-stat { flex-direction: column; align-items: flex-start; gap: 10px; } }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
