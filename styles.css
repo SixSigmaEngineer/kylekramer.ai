@@ -96,8 +96,8 @@ button, .btn, .nav-toggle, [onclick] { cursor: pointer; }
 .btn-primary:hover { background: var(--accent-dk); color: #fff; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
-.btn-light { background: #fff; color: var(--ink); }
-.btn-light:hover { background: #f0f0f0; color: var(--ink); }
+.btn-light { background: #fff; color: #14213d; }
+.btn-light:hover { background: #f0f0f0; color: #14213d; }
 .btn-outline-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
 .btn-outline-light:hover { border-color: #fff; color: #fff; }
 
@@ -229,6 +229,13 @@ button, .btn, .nav-toggle, [onclick] { cursor: pointer; }
 /* ---------- Scroll reveal (only hidden when JS active) ---------- */
 .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .js .reveal.in { opacity: 1; transform: none; }
+
+
+/* ---------- Pull quote (jazz / innovation) ---------- */
+.pullquote { border-left: 3px solid var(--accent); padding: 6px 0 6px 26px; margin: 8px 0 28px; }
+.pullquote blockquote { font-family: var(--serif); font-size: clamp(1.4rem,2.6vw,1.9rem); color: var(--ink); line-height: 1.25; margin: 0 0 10px; font-weight: 500; }
+.pullquote cite { font-style: normal; font-weight: 600; color: var(--accent-dk); font-size: .95rem; }
+.pullquote .gloss { color: var(--ink-soft); margin-top: 14px; font-size: 1.08rem; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
