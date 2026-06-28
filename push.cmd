@@ -18,6 +18,12 @@ REM ------------------------------------------------------------
 
 cd /d "%~dp0"
 
+REM --- Clear a stale git lock left by a crashed/interrupted run ---
+if exist ".git\index.lock" (
+  echo Clearing stale git lock...
+  del /f /q ".git\index.lock"
+)
+
 echo.
 echo ===============================================
 echo   Publishing kylekramer.ai

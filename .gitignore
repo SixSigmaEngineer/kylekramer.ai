@@ -11,5 +11,17 @@ desktop.ini
 # Source/original assets (optimized copies live in images/)
 Book Launch.png
 
+# Large source infographics/logos (optimized .jpg copies are what the site uses)
+images/*.png
+
+# Project source folders - NOT part of the website (keep private, never publish)
+Skate V4/
+CARES for Finance/
+Aberdeen CRM/
+AI ROI/
+Client Pitch Program/
+Podcastify/
+SimPY Post/
+
 # Vercel
 .vercel
