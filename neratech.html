@@ -145,7 +145,7 @@
 
   <style>
     #nera-dog{
-      position:fixed;left:0;bottom:-14px;width:122px;height:86px;z-index:30;
+      position:fixed;left:0;bottom:8px;width:122px;height:86px;z-index:30;
       pointer-events:none;will-change:transform;transition:transform .16s linear;
       transform-origin:50% 82%;filter:drop-shadow(0 8px 12px rgba(0,0,0,.18));
     }
@@ -166,7 +166,12 @@
     @keyframes kkDog3dRun{0%,100%{transform:translateY(6px) rotate(-1deg)}50%{transform:translateY(-4px) rotate(1deg)}}
     @keyframes kkDog3dShadow{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.82);opacity:.62}}
 
-    @media (max-width:640px){#nera-dog{width:72px;height:52px;bottom:-14px;}}
+    @media (max-width:640px){
+      #nera-dog{
+        width:96px;height:68px;bottom:calc(env(safe-area-inset-bottom, 0px) + 14px);
+        z-index:60;
+      }
+    }
     @media (prefers-reduced-motion: reduce){#nera-dog{display:none;}}
   </style>
 
