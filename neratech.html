@@ -219,7 +219,7 @@
         var x=margin+prog*travel;
         if(y>lastY+1) dir=1; else if(y<lastY-1) dir=-1;
         lastY=y;
-        dog.style.transform='translate3d('+x+'px,0,0) scaleX('+dir+')';
+        dog.style.transform='translate3d('+x+'px,0,0) scaleX('+(-dir)+')';
         dog.classList.add('run');
         setDogAnimation(runAnimation);
         clearTimeout(idle);
