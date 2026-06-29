@@ -129,7 +129,7 @@
   <div id="nera-dog" aria-hidden="true">
     <model-viewer
       id="nera-dog-model"
-      src="models/labrador_dog_from_cotw_game.glb"
+      data-src="models/labrador_dog_from_cotw_game.glb"
       camera-orbit="90deg 78deg 110%"
       field-of-view="24deg"
       exposure="1.85"
@@ -166,12 +166,7 @@
     @keyframes kkDog3dRun{0%,100%{transform:translateY(6px) rotate(-1deg)}50%{transform:translateY(-4px) rotate(1deg)}}
     @keyframes kkDog3dShadow{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(.82);opacity:.62}}
 
-    @media (max-width:640px){
-      #nera-dog{
-        width:96px;height:68px;bottom:calc(env(safe-area-inset-bottom, 0px) + 14px);
-        z-index:60;
-      }
-    }
+    @media (max-width:760px){#nera-dog{display:none;}}
     @media (prefers-reduced-motion: reduce){#nera-dog{display:none;}}
   </style>
 
@@ -182,6 +177,8 @@
       if(!dog) return;
       if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){dog.style.display='none';return;}
       var model=document.getElementById('nera-dog-model');
+      if(window.matchMedia&&window.matchMedia('(max-width: 760px)').matches){dog.style.display='none';return;}
+      if(model&&model.dataset.src&&!model.getAttribute('src')) model.setAttribute('src',model.dataset.src);
       var runAnimation='Armature|labrador_run_fwd_01';
       var sitAnimations=[
         'Armature|labrador_idle_sit_one_off_scratch_01',
