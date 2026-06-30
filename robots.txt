@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kylekramer.ai/sitemap.xml
+Sitemap: https://www.kylekramer.ai/sitemap.xml

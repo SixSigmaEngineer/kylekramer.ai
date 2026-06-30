@@ -10,21 +10,21 @@
   <meta property="og:site_name" content="Kyle Kramer">
   <meta property="og:title" content="NeraTech — Kyle Kramer">
   <meta property="og:description" content="NeraTech, LLC — Kyle Kramer's independent AI and technology advisory practice. AI strategy, governance, custom AI builds, and ROI-driven transformation.">
-  <meta property="og:url" content="https://kylekramer.ai/neratech">
-  <meta property="og:image" content="https://kylekramer.ai/images/kyle-kramer.jpg">
+  <meta property="og:url" content="https://www.kylekramer.ai/neratech">
+  <meta property="og:image" content="https://www.kylekramer.ai/images/kyle-kramer.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://kylekramer.ai/images/kyle-kramer.jpg">
-  <link rel="canonical" href="https://kylekramer.ai/neratech">
+  <meta name="twitter:image" content="https://www.kylekramer.ai/images/kyle-kramer.jpg">
+  <link rel="canonical" href="https://www.kylekramer.ai/neratech">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://kylekramer.ai/neratech#webpage",
-    "url": "https://kylekramer.ai/neratech",
+    "@id": "https://www.kylekramer.ai/neratech#webpage",
+    "url": "https://www.kylekramer.ai/neratech",
     "name": "NeraTech — Kyle Kramer",
     "description": "NeraTech, LLC — Kyle Kramer's independent AI and technology advisory practice.",
-    "isPartOf": { "@type": "WebSite", "@id": "https://kylekramer.ai/#website", "url": "https://kylekramer.ai/", "name": "Kyle Kramer" },
-    "about": { "@type": "Organization", "name": "NeraTech, LLC", "founder": { "@type": "Person", "@id": "https://kylekramer.ai/#person", "name": "Kyle Kramer" } }
+    "isPartOf": { "@type": "WebSite", "@id": "https://www.kylekramer.ai/#website", "url": "https://www.kylekramer.ai/", "name": "Kyle Kramer" },
+    "about": { "@type": "Organization", "name": "NeraTech, LLC", "founder": { "@type": "Person", "@id": "https://www.kylekramer.ai/#person", "name": "Kyle Kramer" } }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -217,43 +217,4 @@
         if(typeof model.play==='function') model.play();
       }
       function sit(){
-        dog.classList.remove('run');
-        setDogAnimation(sitAnimations[sitIndex%sitAnimations.length]);
-        sitIndex++;
-        clearTimeout(sitTimer);
-        sitTimer=setTimeout(sit,6500);
-      }
-      if(model){
-        model.addEventListener('load',function(){
-          sit();
-        });
-        setTimeout(sit,2500);
-      }
-      function place(){
-        ticking=false;
-        var doc=document.documentElement;
-        var max=(doc.scrollHeight-window.innerHeight)||1;
-        var y=window.scrollY||window.pageYOffset||0;
-        var prog=Math.min(Math.max(y/max,0),1);
-        var margin=window.innerWidth<640?4:8;
-        var travel=Math.max(window.innerWidth-dog.offsetWidth-(margin*2),0);
-        var x=margin+prog*travel;
-        if(y>lastY+1) dir=1; else if(y<lastY-1) dir=-1;
-        lastY=y;
-        dog.style.transform='translate3d('+x+'px,0,0) scaleX('+(-dir)+')';
-        dog.classList.add('run');
-        setDogAnimation(runAnimation);
-        clearTimeout(idle);
-        clearTimeout(sitTimer);
-        idle=setTimeout(sit,360);
-      }
-      function onScroll(){ if(!ticking){ticking=true;requestAnimationFrame(place);} }
-      window.addEventListener('scroll',onScroll,{passive:true});
-      window.addEventListener('resize',place);
-      place(); dog.classList.remove('run');
-    })();
-  </script>
-
-  <script src="effects.js"></script>
-</body>
-</html>
+  
