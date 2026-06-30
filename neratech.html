@@ -217,4 +217,43 @@
         if(typeof model.play==='function') model.play();
       }
       function sit(){
-  
+        dog.classList.remove('run');
+        setDogAnimation(sitAnimations[sitIndex%sitAnimations.length]);
+        sitIndex++;
+        clearTimeout(sitTimer);
+        sitTimer=setTimeout(sit,6500);
+      }
+      if(model){
+        model.addEventListener('load',function(){
+          sit();
+        });
+        setTimeout(sit,2500);
+      }
+      function place(){
+        ticking=false;
+        var doc=document.documentElement;
+        var max=(doc.scrollHeight-window.innerHeight)||1;
+        var y=window.scrollY||window.pageYOffset||0;
+        var prog=Math.min(Math.max(y/max,0),1);
+        var margin=window.innerWidth<640?4:8;
+        var travel=Math.max(window.innerWidth-dog.offsetWidth-(margin*2),0);
+        var x=margin+prog*travel;
+        if(y>lastY+1) dir=1; else if(y<lastY-1) dir=-1;
+        lastY=y;
+        dog.style.transform='translate3d('+x+'px,0,0) scaleX('+(-dir)+')';
+        dog.classList.add('run');
+        setDogAnimation(runAnimation);
+        clearTimeout(idle);
+        clearTimeout(sitTimer);
+        idle=setTimeout(sit,360);
+      }
+      function onScroll(){ if(!ticking){ticking=true;requestAnimationFrame(place);} }
+      window.addEventListener('scroll',onScroll,{passive:true});
+      window.addEventListener('resize',place);
+      place(); dog.classList.remove('run');
+    })();
+  </script>
+
+  <script src="effects.js"></script>
+</body>
+</html>
